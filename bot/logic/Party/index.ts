@@ -17,4 +17,7 @@ export class Party {
     getOne(i){
         return this.members.find(e => e.id === i);
     }
+    getDamagePerTick() : number{
+        return 10;
+    }
 }

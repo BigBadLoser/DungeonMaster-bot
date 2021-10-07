@@ -6,7 +6,11 @@ const {SlashCommandBuilder} = require('@discordjs/builders');
 
 import { CommandList } from './commands/_CommandList';
 const commands = [];
-//const commandFilesT = fsT.readdirSync('./commands').filter(file => file.endsWith('.ts'));
+
+/*
+ * HELPER FUNCTION THAT REGISTERS OUR COMMANDS TO DISCORD.
+ * THIS ONE REGISTERS THEM LOCALLY, IN MY TEST SERVER (DEFINED IN CONFIG.JSON)
+ */
 
 for (const c of CommandList) {
 	let newCommand = new SlashCommandBuilder().setName(c.name).setDescription(c.description)
